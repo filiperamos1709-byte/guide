@@ -50,6 +50,7 @@ td:nth-child(2), td:nth-child(3), th:nth-child(2), th:nth-child(3) { width: 74px
 td:nth-child(3), th:nth-child(3) { width: 92px; }
 tr:last-child td { border-bottom: 0; }
 tr.giorno th { padding-top: 16px; }
+.solo-stampa { display: none; }
 td small { color: var(--tenue); font-size: 0.85em; }
 
 .chiusura { margin-top: 8px; }
@@ -280,6 +281,11 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linha)
   .fasi.compatta td { padding: 2.5px 0; }
   .fasi.compatta td:nth-child(2), .fasi.compatta th:nth-child(2) { width: 46px; }
   .fasi.compatta td:nth-child(3), .fasi.compatta th:nth-child(3) { width: 34px; }
+  /* il fecho che non ci sta sotto la griglia va nella cella libera accanto all'ultimo gradino */
+  .solo-stampa { display: block; }
+  .chiusura-stampa { border-color: var(--arancio); }
+  .chiusura-stampa h3 { color: var(--arancio); font-size: 14px; margin-bottom: 6px; }
+  .chiusura-stampa p { font-size: 10.5px; margin-bottom: 6px; }
   td { padding: 5px 0; }
   td:nth-child(2), th:nth-child(2) { width: 54px; }
   td:nth-child(3), th:nth-child(3) { width: 62px; }
