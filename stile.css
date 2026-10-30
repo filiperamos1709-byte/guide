@@ -49,6 +49,7 @@ td { padding: 9px 0; border-bottom: 1px solid var(--linha); vertical-align: top;
 td:nth-child(2), td:nth-child(3), th:nth-child(2), th:nth-child(3) { width: 74px; text-align: right; white-space: nowrap; padding-left: 10px; }
 td:nth-child(3), th:nth-child(3) { width: 92px; }
 tr:last-child td { border-bottom: 0; }
+td small { color: var(--tenue); font-size: 0.85em; }
 
 .chiusura { margin-top: 8px; }
 footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linha); color: var(--tenue); font-size: 13px; }
@@ -80,11 +81,21 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linha)
   .scala li { grid-template-columns: 76px 1fr; gap: 10px; }
   .scala img { width: 76px; height: 98px; }
   .scala p { font-size: 11px; }
+  .scala.tre { grid-template-columns: 1fr 1fr 1fr; }
+  .scala.tre li { grid-template-columns: 64px 1fr; gap: 8px; }
+  .scala.tre img { width: 64px; height: 92px; }
+  .scala.tre h3 { font-size: 12px; }
+  .scala.tre p { font-size: 10px; }
   .n { width: 22px; height: 22px; font-size: 12px; line-height: 22px; margin-bottom: 3px; }
   .nota { margin-top: 10px; }
   .pagina-nuova { break-before: page; padding-top: 12mm; }
   .pagina-nuova h2 { margin-top: 0; }
   .fasi { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+  .fasi.tre { grid-template-columns: 1fr 1fr 1fr; }
+  .fasi.tre table { font-size: 10px; }
+  .fasi.tre th { font-size: 8px; letter-spacing: 0.5px; }
+  .fasi.tre td:nth-child(2), .fasi.tre th:nth-child(2) { width: 50px; }
+  .fasi.tre td:nth-child(3), .fasi.tre th:nth-child(3) { width: 46px; }
   .fase { padding: 10px 12px; }
   .fase h3 span { font-size: 10px; }
   table { font-size: 11px; margin-top: 6px; }
