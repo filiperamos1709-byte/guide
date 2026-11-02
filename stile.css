@@ -158,6 +158,47 @@ footer a { color: var(--grafite); }
 .carta:hover .numero { width: 64px; }
 .carta:focus-visible { outline-offset: -3px; }
 
+/* seminario: la stessa via, i movimenti al posto dei test */
+.blocchi { display: grid; gap: 8px; margin-top: 22px; }
+.blocco { padding: 18px 0 6px; border-top: 2px solid var(--grafite); }
+.blocco h3 { font-size: 22px; }
+.blocco h3 span { display: table; margin-bottom: 10px; padding: 7px 16px 7px 13px; background: var(--arancio); color: var(--nero);
+  font-size: 13px; letter-spacing: .03em; clip-path: var(--inclinato); }
+.tappe { list-style: none; margin: 16px 0 0; padding: 0; counter-reset: tappa; }
+.tappe[start="5"] { counter-reset: tappa 4; }
+.tappe li { position: relative; padding: 14px 0 14px 50px; counter-increment: tappa; font: italic 800 18px/1.2 var(--display);
+  text-transform: uppercase; color: var(--nero); }
+.tappe li::before { content: ""; position: absolute; left: 15px; top: 0; bottom: 0; width: 5px; background: var(--arancio); }
+.tappe li:first-child::before { top: 50%; }
+.tappe li:last-child::before { bottom: 50%; }
+.tappe li:only-child::before { display: none; }
+.tappe li::after { content: counter(tappa); position: absolute; left: 0; top: 50%; translate: 0 -50%; display: grid; place-items: center;
+  width: 35px; height: 35px; border-radius: 50%; background: var(--gesso); border: 5px solid var(--arancio); box-sizing: border-box;
+  font: italic 900 14px/1 var(--display); color: var(--nero); }
+.nota.cima { position: relative; margin-top: 22px; padding: 4px 0 0 50px; font-weight: 600; color: var(--nero); }
+.nota.cima::before { content: ""; position: absolute; left: -4px; top: -2px; width: 44px; height: 30px;
+  background: url("marchio/testa.svg") left center / contain no-repeat; }
+.patto { margin: 18px 0 0; border-bottom: 2px solid var(--grafite); }
+.patto div { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 12px 0; border-top: 1px solid var(--filetto); }
+.patto div:first-child { border-top: 2px solid var(--grafite); }
+.patto dt { padding-top: 3px; font: italic 800 13px/1.3 var(--display); text-transform: uppercase; letter-spacing: .03em; color: var(--tenue); }
+.patto dd { margin: 0; max-width: 52ch; }
+.seminario section > .bottone { margin-top: 4px; }
+
+/* indice: l'invito ai box, dopo le guide */
+.invito { position: relative; display: block; margin-top: 36px; padding: 22px 76px 24px 0; border-bottom: 2px solid var(--grafite);
+  color: var(--grafite); text-decoration: none; transition: background-color .2s ease-out; }
+.invito h2 { margin: 0; padding: 0; border: 0; font-size: 24px; }
+.invito h2 span { color: var(--arancio); }
+.invito p { margin: 6px 0 0; font-size: 15px; line-height: 1.45; }
+.invito::after { content: ""; position: absolute; right: calc(50% - 50vw); top: 50%; translate: 0 -50%; width: 52px; height: 44px;
+  background: var(--arancio); clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); transition: width .25s cubic-bezier(.16, 1, .3, 1); }
+.invito::before { content: ""; position: absolute; z-index: 1; right: calc(50% - 50vw + 14px); top: 50%; translate: 0 -50%; width: 18px; height: 18px;
+  background: var(--nero); -webkit-mask: var(--freccia) center / contain no-repeat; mask: var(--freccia) center / contain no-repeat; }
+.invito:hover { background: var(--carta); }
+.invito:hover::after { width: 64px; }
+.invito:focus-visible { outline-offset: -3px; }
+
 /* schermi larghi */
 @media (min-width: 720px) {
   .guida { max-width: 940px; padding-left: 32px; padding-right: 32px; }
@@ -184,6 +225,13 @@ footer a { color: var(--grafite); }
   .carta h2 { font-size: 24px; }
   .carta .numero { right: -32px; width: 64px; }
   .carta:hover .numero { width: 80px; }
+  .blocchi { grid-template-columns: 1fr 1fr; column-gap: 36px; }
+  .patto div { grid-template-columns: 120px 1fr; }
+  .invito { padding-right: 96px; }
+  .invito h2 { font-size: 28px; }
+  .invito::after { right: -32px; width: 64px; }
+  .invito::before { right: -6px; }
+  .invito:hover::after { width: 80px; }
 }
 
 /* moto: la traccia si disegna una volta, all'apertura */
