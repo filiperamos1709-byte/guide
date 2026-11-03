@@ -78,6 +78,8 @@ b { font-weight: 700; color: var(--nero); }
 .scala li.oltre::before { width: 0; background: none; border-left: 5px dashed var(--filetto); }
 .scala img { width: 92px; height: 115px; object-fit: cover; display: block; background: var(--filetto); }
 .scala li div { min-width: 0; }
+/* test ancora senza foto: il testo prende tutta la riga */
+.scala li.senza-foto, .scala.tre li.senza-foto { grid-template-columns: 1fr; }
 .scala p { margin: 6px 0 0; font-size: 15px; line-height: 1.5; }
 .n { position: absolute; left: 0; top: 16px; z-index: 1; display: grid; place-items: center; width: 35px; height: 35px; margin: 0;
   border-radius: 50%; background: var(--gesso); border: 5px solid var(--arancio); color: var(--nero);
@@ -111,6 +113,7 @@ b { font-weight: 700; color: var(--nero); }
 .fase.tuo td small, .fase.tuo td:nth-child(3) { color: #C9C4BC; }
 .fase.tuo b { color: var(--carta); }
 .foto-fase { display: none; }
+.nota-fase { margin: 10px 0 0; font-size: 14px; line-height: 1.45; color: var(--tenue); }
 table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 15px; }
 th { text-align: left; color: var(--tenue); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
   padding: 0 0 6px; border-bottom: 2px solid var(--filetto); }
@@ -292,6 +295,7 @@ footer a { color: var(--grafite); }
   th { font-size: 8.5px; padding-bottom: 3px; border-bottom-width: 1.5px; }
   tr.giorno th { padding-top: 8px; }
   td { padding: 4.5px 0; }
+  .nota-fase { margin-top: 4px; font-size: 9px; line-height: 1.35; }
   td:nth-child(2), th:nth-child(2) { width: 54px; }
   td:nth-child(3), th:nth-child(3) { width: 62px; }
   /* nove gradini con due giorni ciascuno: devono stare in una pagina */
