@@ -318,3 +318,20 @@ footer a { color: var(--grafite); }
   .chiusura b { color: var(--arancio-testo); }
   .chiusura > :not(.gorilla) { max-width: none; }
 }
+
+/* lista d'attesa FAR, dentro la chiusura */
+.lista { margin: 22px 0 26px; padding: 20px 0 0; border-top: 1px solid #55524E; }
+.lista > label { display: block; font-weight: 600; color: var(--carta); margin-bottom: 12px; }
+.lista .riga { display: flex; gap: 0; max-width: 520px; }
+.lista input[type="email"] { flex: 1; min-width: 0; min-height: 50px; padding: 0 14px; border: 2px solid var(--carta); border-right: 0;
+  background: var(--carta); color: var(--nero); font: 400 17px/1 var(--lettura); border-radius: 0; }
+.lista input[type="email"]:focus-visible { outline: 3px solid var(--arancio); outline-offset: 0; }
+.lista button { min-height: 50px; padding: 0 20px; border: 2px solid var(--arancio); background: var(--arancio); color: var(--nero);
+  font: italic 800 15px/1 var(--display); text-transform: uppercase; cursor: pointer; }
+.lista button:hover { background: #F07A2E; }
+.lista button:disabled { opacity: .6; cursor: wait; }
+.lista .spunta { display: flex; gap: 10px; align-items: flex-start; margin-top: 12px; max-width: 520px; font-size: 14px; line-height: 1.45; color: #CFCAC2; }
+.lista .spunta input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--arancio); }
+.lista .trappola { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.lista .esito-lista { margin: 12px 0 0; font-weight: 700; color: #F7883D; min-height: 1.6em; }
+.lista.fatto .riga, .lista.fatto .spunta { display: none; }
